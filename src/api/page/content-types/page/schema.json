@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "entryTitle": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "private": true
+    },
+    "slug": {
+      "type": "component",
+      "repeatable": false,
+      "component": "element.link",
+      "required": true
+    }
+  }
+}
