@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_page_heroes",
+  "collectionName": "components_section_multi_columns",
   "info": {
-    "displayName": "hero",
-    "description": ""
+    "displayName": "multiColumn"
   },
   "options": {},
   "attributes": {
@@ -12,18 +11,15 @@
     "subHeading": {
       "type": "string"
     },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "element.card"
+    },
     "ctaButton": {
       "type": "component",
       "repeatable": false,
       "component": "element.link"
-    },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
     }
   }
 }

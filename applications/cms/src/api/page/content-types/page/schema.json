@@ -12,17 +12,18 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "entryTitle": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "private": true
-    },
     "slug": {
       "type": "component",
       "repeatable": false,
       "component": "element.link",
       "required": true
+    },
+    "sections": {
+      "type": "dynamiczone",
+      "components": [
+        "section.hero",
+        "section.multi-column"
+      ]
     }
   }
 }

@@ -20,12 +20,6 @@
         "images"
       ]
     },
-    "entryTitle": {
-      "type": "string",
-      "required": true,
-      "unique": true,
-      "private": true
-    },
     "links": {
       "type": "dynamiczone",
       "components": [
