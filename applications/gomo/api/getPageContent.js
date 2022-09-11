@@ -4,7 +4,16 @@ const fetch = require("isomorphic-fetch");
 function getPagecontent() {
   const query = qs.stringify(
     {
-      populate: "*",
+      populate: [
+        `
+        slug,
+        sections,
+        sections.ctaButton,
+        sections.image,
+        sections.cards,
+        sections.cards.image
+      `,
+      ],
     },
     {
       encodeValuesOnly: true,

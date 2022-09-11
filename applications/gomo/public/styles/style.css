@@ -1,8 +1,172 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-family: Roboto;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  background-color: #ec118b;
+  padding: 10px 0;
+}
+
+nav {
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+header li {
+  padding: 0 20px;
+}
+
+header li:last-of-type {
+  padding-right: 0;
+}
+
+header a:not(.button) {
+  font-size: 17px;
+  color: #fff;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+}
+
+.button {
+  border: none;
+}
+
+.button--primary {
+  background-color: #ec118b;
+  color: #fff;
+  font-size: 18px;
+  padding: 15px 60px;
+  margin-top: 30px;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+.button--secondary {
+  background-color: #fad139;
+  color: #4a138c;
+  font-size: 14px;
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+h1 {
+  color: #4a138c;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 1.1;
+  margin: 20px 0;
+}
+
+section {
+  padding: 50px 0;
+}
+
+.hero {
+  background-color: #fad139;
+}
+
+.hero .center {
+  justify-content: center;
+}
+
+.hero-text-container {
+  width: 430px;
+  margin-right: 70px;
+}
+
+.hero span {
+  display: block;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #4a138c;
+}
+
+.multi-column {
+  background-color: #356df2;
+}
+
+.multi-column p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.card {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card a {
+  color: #fad139;
+}
+
+footer {
+  padding-top: 30px;
+}
+
+footer li span {
+  color: #ec118b;
+  padding: 0 10px;
+}
+
+footer a {
+  color: #ec118b;
+}
+
+.copyright {
+  color: #4a138c;
+  text-align: left;
+  margin-top: 10px;
 }

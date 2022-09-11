@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Strapi Demo</title>
     <link rel="stylesheet" href="/styles/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <header>
+      <nav class="center flex">
+        <a href="<%= slug.url %>">
+          <img src="<%= process.env.STRAPI_ENDPOINT + logo.url %>" width="<%=
+          logo.width %>" height=="<%= logo.height %>" alt="<%=
+          logo.alternativeText %>" />
+        </a>
+
+        <ul>
+          <% for (let i=0; i < headerLinks.length; i++) { %>
+          <li>
+            <a
+              class="<%= headerLinks[i].isButton ? 'button button--secondary' : null %>"
+              href="<%= headerLinks[i].url %>"
+            >
+              <%= headerLinks[i].label %>
+            </a>
+          </li>
+          <% } %>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="center flex">
+        <div class="hero-text-container">
+          <h1><%= hero.heading %></h1>
+          <span><%= hero.subHeading %></span>
+          <a class="button button--primary" href="<%= hero.ctaButton.url %>">
+            <%= hero.ctaButton.label %>
+          </a>
+        </div>
+
+        <img
+          src="<%= process.env.STRAPI_ENDPOINT + hero.image.url %>"
+          width="500"
+          alt="<%= hero.image.alternativeText %>"
+        />
+      </div>
+    </section>
+
+    <section class="multi-column">
+      <div class="center">
+        <h2><%= multiColumn.heading %></h2>
+        <p><%= multiColumn.subHeading %></p>
+
+        <div class="flex">
+          <% for (let i=0; i < multiColumn.cards.length; i++) { %>
+          <div class="card">
+            <img
+              src="<%= process.env.STRAPI_ENDPOINT + multiColumn.cards[i].image.url %>"
+              width="60"
+              height="60"
+              alt="<%= multiColumn.cards[i].image.alternativeText %>"
+            />
+            <h3><%= multiColumn.cards[i].heading %></h3>
+            <%- multiColumn.cards[i].description %>
+          </div>
+          <% } %>
+        </div>
+
+        <a
+          class="button button--primary"
+          href="<%= multiColumn.ctaButton.url %>"
+        >
+          <%= multiColumn.ctaButton.label %>
+        </a>
+      </div>
+    </section>
+
+    <footer class="center">
+      <ul>
+        <% for (let i=0; i < footerLinks.length; i++) { %>
+        <li>
+          <a href="<%= footerLinks[i].url %>"><%= footerLinks[i].label %></a>
+
+          <% if (i !== footerLinks.length - 1) { %>
+          <span>|</span>
+          <% } %>
+        </li>
+        <% } %>
+      </ul>
+
+      <p class="copyright"><%= copyright %></p>
+    </footer>
   </body>
 </html>
