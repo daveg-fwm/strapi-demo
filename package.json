@@ -10,6 +10,6 @@
   "scripts": {
     "cms": "lerna run develop --scope=cms --stream",
     "gomo": "lerna run develop --scope=gomo --stream",
-    "start": "lerna run develop --stream"
+    "develop": "lerna run develop --stream"
   }
 }
